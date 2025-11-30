@@ -3,9 +3,9 @@ FROM python:3.12
 WORKDIR /Bot
 ADD . /Bot
 
-RUN apt-get update && apt-get install -y curl
+RUN apt-get update && apt-get install -y python3-poetry
 
-RUN curl -sSL https://install.python-poetry.org | python3 -
+# RUN curl -sSL https://install.python-poetry.org | python3 -
 ENV PATH /root/.local/bin:$PATH
 
 RUN poetry install
